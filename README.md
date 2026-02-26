@@ -84,15 +84,15 @@ python main_sorter.py
 
 Below is the visual map of the CopraSorter project structure:
 
-📦 CopraSorter
- ┣ 📂 models/        # 🧠 Pre-trained .h5 or .tflite model files
- ┣ 📂 datasets/      # 🖼️ Training and validation image sets
- ┣ 📂 static/        # 🎨 CSS and frontend assets
- ┣ 📂 templates/     # 📄 HTML templates for Flask dashboard
- ┣ 📂 hardware/      # 🔌 Arduino (.ino) firmware for actuators
- ┣ 📜 app.py         # ⚙️ Main Flask web server
- ┣ 📜 classifier.py  # 🧪 Image processing & ML prediction logic
- ┗ 📜 requirements.txt  # 📋 Python dependencies
+CopraSorter/
+├── models/          # 🧠 Pre-trained .h5 or .tflite model files
+├── datasets/        # 🖼️ Training and validation image sets
+├── static/          # 🎨 CSS and frontend assets
+├── templates/       # 📄 HTML templates for Flask dashboard
+├── hardware/        # 🔌 Arduino (.ino) firmware for actuators
+├── app.py           # ⚙️ Main Flask web server
+├── classifier.py    # 🧪 Image processing & ML prediction logic
+└── requirements.txt # 📋 Python dependencies
 
 📄 Component Details
 | File / Folder         | Purpose                                                   |
