@@ -1,0 +1,15 @@
+# --- Core Frameworks ---
+Flask>=3.0.0
+tensorflow>=2.15.0  # Or tensorflow-cpu if no GPU is available
+numpy>=1.23.5
+
+# --- Image Processing ---
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# --- Hardware Communication ---
+pyserial>=3.5
+
+# --- Utilities ---
+requests>=2.31.0
+h5py>=3.10.0      # For loading .h5 model files
