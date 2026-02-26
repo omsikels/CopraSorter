@@ -74,4 +74,16 @@ Below is the visual map of the CopraSorter project structure:
  ┣ 📜 app.py              # ⚙️ Main Flask Web Server
  ┣ 📜 classifier.py       # 🧪 Logic for ML Image Prediction
  ┗ 📜 requirements.txt    # 📋 List of required Python libraries
-Component DetailsFile / FolderPurpose📁 /models/Contains the "brain" of the project—the weights that allow the AI to recognize copra quality.📁 /hardware/Contains the firmware that controls the physical motors or servos of the sorting machine.📄 app.pyThe main entry point that hosts the monitoring dashboard.📄 classifier.pyHandles the OpenCV image processing and TensorFlow model inference.</details>🔐 System AccessWhen running the Flask server, the monitoring dashboard can be accessed at:📊 Real-time Monitor: http://localhost:5000🛠️ Admin Settings: http://localhost:5000/settings
+Component Details
+File / FolderPurpose
+📁 /models/Contains the "brain" of the project—the weights that allow the AI to recognize copra quality.
+📁 /hardware/Contains the firmware that controls the physical motors or servos of the sorting machine.
+📄 app.pyThe main entry point that hosts the monitoring dashboard.
+📄 classifier.pyHandles the OpenCV image processing and TensorFlow model inference.
+</details>
+🔐 System Access
+When running the Flask server, the monitoring dashboard can be accessed at:
+
+📊 Real-time Monitor: http://localhost:5000
+
+🛠️ Admin Settings: http://localhost:5000/settings
