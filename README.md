@@ -83,7 +83,9 @@ python main_sorter.py
 <summary><b>🖱️ Click to expand the folder architecture</b></summary>
 
 Below is the visual map of the CopraSorter project structure:
-CopraSorter
+
+```
+CopraSorter/
 ├── models/          # Pre-trained .h5 or .tflite model files
 ├── datasets/        # Training and validation image sets
 ├── static/          # CSS and frontend assets
@@ -92,6 +94,7 @@ CopraSorter
 ├── app.py           # Main Flask web server
 ├── classifier.py    # Image processing & ML prediction logic
 └── requirements.txt # Python dependencies
+```
 
 📄 Component Details
 | File / Folder         | Purpose                                                   |
