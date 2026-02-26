@@ -60,7 +60,11 @@ To ensure the system communicates correctly with both the camera and the sorting
 Install Dependencies:Bashpip install -r requirements.txt
 Run the Application:For the web-based dashboard:Bashpython app.py
 For the standalone sorting script:Bashpython main_sorter.py
-📁 Advanced Info: Directory Structure<details><summary><b>🖱️ Click to expand the folder architecture</b></summary>Below is the visual map of the CopraSorter project structure:
+📁 Advanced Info: Directory Structure
+<details>
+<summary><b>🖱️ Click to expand the folder architecture</b></summary>
+
+Below is the visual map of the CopraSorter project structure:
 📦 CopraSorter
  ┣ 📂 models/             # 🧠 Pre-trained .h5 or .tflite model files
  ┣ 📂 datasets/           # 🖼️ Training and validation image sets
