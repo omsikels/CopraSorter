@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/Arduino-Prototyping-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
 </p>
 
-> **CopraSorter** is an automated agricultural solution designed to modernize the coconut industry. By combining Computer Vision with Deep Learning, this platform identifies, classifies, and sorts copra (dried coconut meat) based on quality standards, ensuring higher market value and reduced manual labor.
+> **CopraSorter** is an automated agricultural solution designed to modernize the coconut industry. By combining Computer Vision with Deep Learning, this platform identifies, classifies, and sorts copra (dried coconut meat) based on quality standards.
 
 ---
 
@@ -18,8 +18,8 @@
 
 | Role | Description |
 | --- | --- |
-| 🔍 **Visual Analysis** | The system captures high-resolution images of copra samples. Using a trained CNN model, it detects defects like mold, discoloration, or moisture damage that are often missed by the naked eye. |
-| 🏗️ **Automated Sorting** | Once classified, the system interfaces with hardware (via Arduino/Serial) to physically sort the copra into different bins (e.g., Grade A, Grade B, or Reject). |
+| 🔍 **Visual Analysis** | The system captures high-resolution images of copra samples. Using a trained CNN model, it detects defects like mold, discoloration, or moisture damage. |
+| 🏗️ **Automated Sorting** | Once classified, the system interfaces with hardware (via Arduino/Serial) to physically sort the copra into different bins. |
 
 ---
 
@@ -27,14 +27,19 @@
 
 To achieve high accuracy in agricultural environments, CopraSorter utilizes a specialized **Convolutional Neural Network (CNN)** optimized for texture and color feature extraction.
 
+
+
+[Image of Convolutional Neural Network architecture for image classification]
+
+
 ### The 4-Stage Classification Pipeline
 
 | Stage | Process | Technology Used |
 | --- | --- | --- |
 | **1** | **Image Acquisition:** Captures raw frames from the sorting conveyor camera. | OpenCV / PiCam |
-| **2** | **Preprocessing:** Resizes, normalizes, and applies Gaussian blurring to remove noise. | NumPy / OpenCV |
-| **3** | **Feature Inference:** The model analyzes the surface area for mold patterns and color consistency. | TensorFlow / Keras |
-| **4** | **Hardware Trigger:** Sends a signal to the actuator to move the sorter arm based on the class. | PySerial / Arduino |
+| **2** | **Preprocessing:** Resizes, normalizes, and applies Gaussian blurring. | NumPy / OpenCV |
+| **3** | **Feature Inference:** Model analyzes the surface for mold and color consistency. | TensorFlow / Keras |
+| **4** | **Hardware Trigger:** Sends a signal to the actuator based on the class. | PySerial / Arduino |
 
 **Grading Categories:**
 
@@ -57,14 +62,28 @@ To ensure the system communicates correctly with both the camera and the sorting
    ```bash
    git clone [https://github.com/omsikels/CopraSorter.git](https://github.com/omsikels/CopraSorter.git)
    cd CopraSorter
-Install Dependencies:Bashpip install -r requirements.txt
-Run the Application:For the web-based dashboard:Bashpython app.py
-For the standalone sorting script:Bashpython main_sorter.py
+
+Install Dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the Application:
+
+For the web-based dashboard:
+
+Bash
+python app.py
+For the standalone sorting script:
+
+Bash
+python main_sorter.py
+
 📁 Advanced Info: Directory Structure
 <details>
 <summary><b>🖱️ Click to expand the folder architecture</b></summary>
 
 Below is the visual map of the CopraSorter project structure:
+
 📦 CopraSorter
  ┣ 📂 models/             # 🧠 Pre-trained .h5 or .tflite model files
  ┣ 📂 datasets/           # 🖼️ Training and validation image sets
@@ -74,15 +93,17 @@ Below is the visual map of the CopraSorter project structure:
  ┣ 📜 app.py              # ⚙️ Main Flask Web Server
  ┣ 📜 classifier.py       # 🧪 Logic for ML Image Prediction
  ┗ 📜 requirements.txt    # 📋 List of required Python libraries
-Component Details
-File / FolderPurpose
-📁 /models/Contains the "brain" of the project—the weights that allow the AI to recognize copra quality.
-📁 /hardware/Contains the firmware that controls the physical motors or servos of the sorting machine.
-📄 app.pyThe main entry point that hosts the monitoring dashboard.
-📄 classifier.pyHandles the OpenCV image processing and TensorFlow model inference.
+
+Component DetailsFile
+File / Folder,Purpose
+📁 /models/,Contains the trained weights that allow the AI to recognize copra quality.
+📁 /hardware/,Contains the firmware that controls physical motors or servos.
+📄 app.py,The main entry point that hosts the monitoring dashboard.
+📄 classifier.py,Handles OpenCV image processing and TensorFlow model inference.
 </details>
+
 🔐 System Access
-When running the Flask server, the monitoring dashboard can be accessed at:
+Once the Flask server is running, you can access the interface at:
 
 📊 Real-time Monitor: http://localhost:5000
 
