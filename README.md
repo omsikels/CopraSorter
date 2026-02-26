@@ -85,21 +85,27 @@ python main_sorter.py
 Below is the visual map of the CopraSorter project structure:
 
 📦 CopraSorter
- ┣ 📂 models/             # 🧠 Pre-trained .h5 or .tflite model files
- ┣ 📂 datasets/           # 🖼️ Training and validation image sets
- ┣ 📂 static/             # 🎨 CSS and Frontend assets for the UI
- ┣ 📂 templates/          # 📄 HTML files for the Flask dashboard
- ┣ 📂 hardware/           # 🔌 Arduino (.ino) source code for actuators
- ┣ 📜 app.py              # ⚙️ Main Flask Web Server
- ┣ 📜 classifier.py       # 🧪 Logic for ML Image Prediction
- ┗ 📜 requirements.txt    # 📋 List of required Python libraries
+ ┣ 📂 models/        # 🧠 Pre-trained .h5 or .tflite model files
+ ┣ 📂 datasets/      # 🖼️ Training and validation image sets
+ ┣ 📂 static/        # 🎨 CSS and frontend assets
+ ┣ 📂 templates/     # 📄 HTML templates for Flask dashboard
+ ┣ 📂 hardware/      # 🔌 Arduino (.ino) firmware for actuators
+ ┣ 📜 app.py         # ⚙️ Main Flask web server
+ ┣ 📜 classifier.py  # 🧪 Image processing & ML prediction logic
+ ┗ 📜 requirements.txt  # 📋 Python dependencies
 
-Component DetailsFile
-File / Folder,Purpose
-📁 /models/,Contains the trained weights that allow the AI to recognize copra quality.
-📁 /hardware/,Contains the firmware that controls physical motors or servos.
-📄 app.py,The main entry point that hosts the monitoring dashboard.
-📄 classifier.py,Handles OpenCV image processing and TensorFlow model inference.
+📄 Component Details
+| File / Folder         | Purpose                                                   |
+| --------------------- | --------------------------------------------------------- |
+| 📁 `models/`          | Stores trained CNN weights used for copra classification. |
+| 📁 `datasets/`        | Contains training and validation image datasets.          |
+| 📁 `static/`          | Frontend assets such as CSS, JavaScript, and images.      |
+| 📁 `templates/`       | HTML templates rendered by the Flask dashboard.           |
+| 📁 `hardware/`        | Arduino firmware controlling motors/servos for sorting.   |
+| 📄 `app.py`           | Entry point of the Flask web application.                 |
+| 📄 `classifier.py`    | Handles OpenCV preprocessing and TensorFlow inference.    |
+| 📄 `requirements.txt` | Lists all required Python libraries for installation.     |
+
 </details>
 
 🔐 System Access
